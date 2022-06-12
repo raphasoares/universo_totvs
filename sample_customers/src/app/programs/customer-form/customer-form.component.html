@@ -1,0 +1,139 @@
+<po-page-edit
+  p-title="Cliente"
+  [p-disable-submit]="formCustomer.invalid"
+  (p-cancel)="cancel()"
+  (p-save)="save()">
+
+  <form #formCustomer="ngForm">
+    <po-divider p-label="Dados pessoais"></po-divider>
+
+    <div class="po-row">
+      <po-input class="po-md-5"
+        p-icon="po-icon-user"
+        name="name"
+        [(ngModel)]="customer['Name']"
+        p-required
+        p-label="Nome">
+      </po-input>
+    </div>
+
+    <div class="po-row">
+
+      <po-input class="po-md-5"
+        name="phone"
+        [(ngModel)]="customer['Phone']"
+        p-required
+        p-label="Telefone">
+      </po-input>
+
+      <po-input class="po-md-5"
+        name="contact"
+        [(ngModel)]="customer['Contact']"
+        p-label="Contato">
+      </po-input>
+
+    </div>
+
+    <po-divider p-label="Endereço"></po-divider>
+
+    <div class="po-row">
+
+      <po-input class="po-md-3"
+        name="country"
+        [(ngModel)]="customer['Country']"
+        p-label="País">
+      </po-input>
+
+      <po-input class="po-md-3"
+        name="state"
+        [(ngModel)]="customer['State']"
+        p-label="Estado">
+      </po-input>
+
+      <po-input class="po-md-3"
+        name="city"
+        [(ngModel)]="customer['City']"
+        p-label="Cidade">
+      </po-input>
+
+      <po-input class="po-md-3"
+        name="postal-code"
+        [(ngModel)]="customer['Postal-Code']"
+        p-required
+        p-label="Código postal">
+      </po-input>
+
+    </div>
+
+    <div class="po-row">
+
+      <po-input class="po-md-12"
+        p-icon="po-icon-pin"
+        name="address"
+        [(ngModel)]="customer['Address']"
+        p-label="Endereço">
+      </po-input>
+
+    </div>
+
+    <div class="po-row">
+
+      <po-input class="po-md-12"
+        p-icon="po-icon-pin"
+        name="address2"
+        [(ngModel)]="customer['Address2']"
+        p-label="Endereço 2">
+      </po-input>
+
+    </div>
+
+    <po-divider p-label="Comercial"></po-divider>
+
+    <div class="po-row">
+
+      <po-input class="po-md-3"
+        name="sales-rep"
+        [(ngModel)]="customer['Sales-Rep']"
+        p-label="Representante de vendas">
+      </po-input>
+
+      <po-number class="po-md-3"
+        p-icon="po-icon-finance"
+        name="credit-limit"
+        [(ngModel)]="customer['Credit-Limit']"
+        p-label="Limite de crédito">
+      </po-number>
+
+      <po-number class="po-md-3"
+        p-icon="po-icon-finance"
+        name="discount"
+        [(ngModel)]="customer['Discount']"
+        p-label="Desconto">
+      </po-number>
+
+      <po-number class="po-md-3"
+        p-icon="po-icon-finance"
+        name="balance"
+        [(ngModel)]="customer['Balance']"
+        p-label="Saldo">
+      </po-number>
+
+    </div>
+
+    <div class="po-row">
+      <po-input class="po-md-3"
+        name="terms"
+        [(ngModel)]="customer['Terms']"
+        p-label="Termo">
+      </po-input>
+
+      <po-input class="po-md-6"
+        name="comments"
+        [(ngModel)]="customer['Comments']"
+        p-label="Comentários">
+      </po-input>
+
+    </div>
+
+  </form>
+</po-page-edit>
