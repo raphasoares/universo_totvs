@@ -1,0 +1,15 @@
+<po-page-list
+  p-title="Clientes"
+  [p-actions]="actions">
+
+  <po-table
+    [p-columns]="columns"
+    [p-items]="customers"
+    [p-show-more-disabled]="!hasNext"
+    (p-show-more)="showMore()"
+    [p-actions]="tableActions"
+    [p-actions-right]="true">
+
+  </po-table>
+
+</po-page-list>
